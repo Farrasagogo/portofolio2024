@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowUp, ExternalLink, Mail, Github, Linkedin, Moon, Sun, Send } from 'lucide-react';
+import { LockKeyhole, ChevronLeft, ChevronRight, ArrowUp, ExternalLink, Mail, Github, Linkedin, Moon, Sun, Send } from 'lucide-react';
 import fotoFarras from './assets/Farras.jpg';
 import logoFarras from './assets/logo_farras.png';
+
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [activeFilter, setActiveFilter] = useState('all');
   const [darkMode, setDarkMode] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState({});
 
   useEffect(() => {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -21,59 +23,126 @@ const Portfolio = () => {
   }, []);
 
   const projects = [
+    
+    {
+      id: 0,
+      title: 'Subur',
+      category: 'mobile',
+      tech: ['Kotlin', 'Firestore', 'Retrofit'],
+      github: 'https://github.com/Farrasagogo/subur',
+      demo: 'https://youtube.com/shorts/8Nr7qW2GpMg?feature=share',
+      images: [
+        '/subur/21.png',
+        '/subur/22.png'
+      ],
+      description: 'Mobile application for agricultural management.'
+    },
     {
       id: 1,
-      title: 'Gradian',
-      category: 'web',
-      tech: ['React', 'Node.js', 'MongoDB'],
-      github: 'https://github.com/username/ecommerce-platform',
-      demo: 'https://ecommerce-platform-demo.com',
-      image: logoFarras,
+      title: 'Udaraku',
+      category: 'mobile',
+      tech: ['Flutter', 'Firebase', 'Firestore'],
+      github: 'https://github.com/Farrasagogo/subur',
+      demo: 'https://youtube.com/shorts/8Nr7qW2GpMg?feature=share',
+      images: [
+        '/udaraku/udaraku.png',
+        '/udaraku/udaraku3.png',
+        '/udaraku/udaraku4.png',
+        '/udaraku/udaraku1.png'
+      ],
+      description: 'Mobile application for agricultural management.'
     },
     {
       id: 2,
-      title: 'Subur',
-      category: 'mobile',
-      tech: ['Kotlin', 'Firebase', 'Retrofit'],
-      github: 'https://github.com/Farrasagogo/subur',
-      demo: 'https://mobile-app-demo.com',
-      image: '/images/mobile-app.png', 
+      title: 'PakarTani',
+      category: 'web',
+      tech: ['PHP', 'Laravel', 'RestApi','MySQL;'],
+      github: 'https://github.com/Farrasagogo/PakarTani',
+      demo: 'https://youtu.be/jygfmQo3dY0',
+      images: [
+       '/pakartani/pakar1.png',
+        '/pakartani/pakar2.png',
+        '/pakartani/pakar3.png',
+        '/pakartani/pakar4.png',
+        '/pakartani/pakar5.png',
+        '/pakartani/pakar6.png'
+      ],
+      description: 'A comprehensive e-commerce platform with modern features.'
     },
     {
       id: 3,
-      title: 'Crop Recommendation',
-      category: 'aI',
-      tech: ['Python', 'TensorFlow', 'Flask'],
-      github: 'https://github.com/username/ai-dashboard',
-      demo: 'https://ai-dashboard-demo.com',
-      image: '/images/crop-recommendation.png', 
+      title: 'Gradian',
+      category: 'web',
+      tech: ['PHP', 'Laravel', 'Firebase'],
+      github: 'https://github.com/Farrasagogo/gradian',
+      images: [
+        '/gradian/Penyinaran.png',
+        '/gradian/Penyiraman.png',
+        '/gradian/PenyiramanObat.png',
+        '/gradian/Login.png',
+        '/gradian/Profil.png'
+      ],
+      description: 'A comprehensive e-commerce platform with modern features.'
     },
     {
       id: 4,
-      title: 'Pakar Tani',
-      category: 'web',
-      tech: ['React', 'Tailwind CSS'],
-      github: 'https://github.com/Farrasagogo/PakarTani',
-      demo: 'https://portfolio-demo.com',
-      image: '/images/portfolio.png', 
+      title: 'Crop Recomendation',
+      category: 'aI',
+      tech: ['Python', 'TensorFlow', 'OpenCV'],
+      github: 'https://github.com/username/visionary-ai',
+      demo: 'https://youtu.be/448gBbJid0g',
+      images: [
+        '/croprecommendation/croprec1.png',
+        '/croprecommendation/croprec2.png',
+      ],
+      description: 'An AI-powered image recognition tool for real-time object detection and classification.'
     },
     {
       id: 5,
-      title: 'IOT',
+      title: 'GradianIoT',
       category: 'ioT',
-      tech: ['React Native', 'Firebase'],
-      github: 'https://github.com/username/mobile-app',
-      demo: 'https://mobile-app-demo.com',
-      image: '/images/iot.png', 
+      tech: ['C++', 'ESP8266', 'Firebase',],
+      github: 'https://github.com/Farrasagogo/GraDianIOT',
+      images: [
+        '/gradianiot/gradianiot (3).jpeg',
+        '/gradianiot/gradianiot.png',
+        '/gradianiot/gradianiot (2).jpeg',
+        '/gradianiot/gradianiot.jpeg'
+
+      ],
+      description: 'A comprehensive e-commerce platform with modern features.'
+    },
+    {
+      id: 6,
+      title: 'ESTTANI',
+      category: 'web',
+      tech: ['PHP Native', 'Javascript', 'MySQL',],
+      github: 'https://github.com/username/ecommerce-platform',
+      images: [
+        '/EST/EST1.png',
+        '/EST/EST2.png',
+        '/EST/EST3.png',
+        '/EST/EST4.png',
+        '/EST/EST5.png',
+        '/EST/EST6.jpg',
+        '/EST/EST7.jpg',
+        '/EST/EST8.jpg',
+        '/EST/EST9.jpg',
+        '/EST/EST10.jpg',
+        '/EST/EST11.jpg',
+        '/EST/EST12.jpg'
+      ],
+      description: 'A comprehensive e-commerce platform with modern features.'
     },
   ];
+  
   
 
   const skills = {
     programming: [
       'JavaScript', 'Laravel', 'Python', 'PHP', 'C#', 'Dart', 'Kotlin', 'C++'
     ],
-    frameworks_and_libraries: [
+    frameworks_libs: [
       'React', 'Node.js', 'Django', 'Laravel', 'Flutter', 
       'Bootstrap', 'Tailwind CSS'
     ],
@@ -119,6 +188,20 @@ const Portfolio = () => {
 
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/0811370283", "_blank");
+  };
+
+  const nextImage = (projectId) => {
+    setCurrentImageIndex(prev => ({
+      ...prev,
+      [projectId]: ((prev[projectId] || 0) + 1) % projects.find(p => p.id === projectId).images.length
+    }));
+  };
+
+  const prevImage = (projectId) => {
+    setCurrentImageIndex(prev => ({
+      ...prev,
+      [projectId]: ((prev[projectId] || 0) - 1 + projects.find(p => p.id === projectId).images.length) % projects.find(p => p.id === projectId).images.length
+    }));
   };
 
   return (
@@ -232,6 +315,7 @@ const Portfolio = () => {
         <h2 className={`text-2xl font-light mb-12 tracking-wide ${darkMode ? 'text-white' : 'text-black'} transition-colors duration-300`}>
           Selected Projects
         </h2>
+        
         <div className="flex justify-center mb-12 space-x-4">
           {['all', 'web', 'mobile', 'aI', 'ioT'].map((filter) => (
             <button
@@ -247,52 +331,118 @@ const Portfolio = () => {
             </button>
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-  {projects
-    .filter((project) => activeFilter === 'all' || project.category === activeFilter)
-    .map((project) => (
-      <div 
-        key={project.id}
-        className={`group relative overflow-hidden rounded-lg ${darkMode ? 'bg-gray-800' : 'bg-gray-100'} aspect-video hover:shadow-lg transition-all duration-300`}
-      >
-        <img
-          src={project.image} // Use the project's custom image
-          alt={project.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-        />
-        <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <div className="text-white text-center p-6">
-            <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-            <div className="flex flex-wrap justify-center gap-2 mb-6">
-              {project.tech.map((tech) => (
-                <span key={tech} className="text-xs px-2 py-1 bg-white/20 rounded">
-                  {tech}
-                </span>
-              ))}
-            </div>
-            <div className="flex justify-center gap-4">
-              <a 
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 bg-white text-black rounded hover:bg-gray-200 transition-colors duration-300"
+
+        <div className="grid grid-cols-1 gap-16">
+          {projects
+            .filter((project) => activeFilter === 'all' || project.category === activeFilter)
+            .map((project) => (
+              <div 
+                key={project.id}
+                className={`group ${darkMode ? 'bg-gray-800' : 'bg-gray-100'} rounded-xl p-6 hover:shadow-xl transition-all duration-300`}
               >
-                Live Demo <ExternalLink size={16} className="ml-1" />
-              </a>
-              <a 
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition-colors duration-300"
-              >
-                GitHub <Github size={16} className="ml-1" />
-              </a>
-            </div>
-          </div>
+                <div className="flex flex-col lg:flex-row gap-8">
+                  <div className="lg:w-2/3 relative">
+                    <div className="relative aspect-video rounded-lg overflow-hidden">
+                      <img
+                        src={project.images[currentImageIndex[project.id] || 0]}
+                        alt={`${project.title} screenshot ${currentImageIndex[project.id] || 0 + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                      
+                      {project.images.length > 1 && (
+                        <>
+                          <button 
+                            onClick={(e) => {
+                              e.preventDefault();
+                              prevImage(project.id);
+                            }}
+                            className="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 rounded-full text-white"
+                          >
+                            <ChevronLeft size={24} />
+                          </button>
+                          <button 
+                            onClick={(e) => {
+                              e.preventDefault();
+                              nextImage(project.id);
+                            }}
+                            className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 rounded-full text-white"
+                          >
+                            <ChevronRight size={24} />
+                          </button>
+                        </>
+                      )}
+                      
+                      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
+                        {project.images.map((_, idx) => (
+                          <div
+                            key={idx}
+                            className={`w-2 h-2 rounded-full ${
+                              (currentImageIndex[project.id] || 0) === idx 
+                                ? 'bg-white' 
+                                : 'bg-white/50'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="lg:w-1/3 flex flex-col justify-between">
+                    <div>
+                      <h3 className={`text-2xl font-semibold mb-4 ${darkMode ? 'text-white' : 'text-black'}`}>
+                        {project.title}
+                      </h3>
+                      <p className={`mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                        {project.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {project.tech.map((tech) => (
+                          <span 
+                            key={tech} 
+                            className={`text-sm px-3 py-1 rounded-full ${
+                              darkMode 
+                                ? 'bg-gray-700 text-gray-200' 
+                                : 'bg-gray-200 text-gray-700'
+                            }`}
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="flex gap-4">
+                      {project.demo ? (
+                        <a 
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-black dark:bg-white text-white dark:text-black rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors duration-300"
+                        >
+                          Live Demo <ExternalLink size={16} className="ml-2" />
+                        </a>
+                      ) : (
+                        <button 
+                          disabled
+                          className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gray-400 dark:bg-gray-600 text-gray-300 dark:text-gray-400 rounded-lg cursor-not-allowed"
+                        >
+                          Demo Unavailable <LockKeyhole size={16} className="ml-2" />
+                        </button>
+                      )}
+                      <a 
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300"
+                      >
+                        GitHub <Github size={16} className="ml-2" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
         </div>
-      </div>
-  ))}
-</div>
       </div>
     </section>
 
@@ -506,7 +656,7 @@ const Portfolio = () => {
               <ArrowUp size={20} />
             </button>
       
-            {/* Styles tag */}
+            {/* Style tag */}
             <style jsx>{`
               @keyframes float {
                 from { transform: translateY(0); }
@@ -517,6 +667,10 @@ const Portfolio = () => {
           
         );
       };
+
+      
       
       export default Portfolio;  
+      
+      
             

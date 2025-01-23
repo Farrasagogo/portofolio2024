@@ -35,7 +35,7 @@ const Portfolio = () => {
         '/subur/21.png',
         '/subur/22.png'
       ],
-      description: 'Mobile application for agricultural management.'
+      description: 'Mobile application for detecting and managing rice crop diseases.'
     },
     {
       id: 1,
@@ -48,9 +48,10 @@ const Portfolio = () => {
         '/udaraku/udaraku.png',
         '/udaraku/udaraku3.png',
         '/udaraku/udaraku4.png',
+        '/udaraku/diagram.png',
         '/udaraku/udaraku1.png'
       ],
-      description: 'Mobile application for agricultural management.'
+      description: 'Mobile application and IoT system for detecting air quality and providing health tips.'
     },
     {
       id: 2,
@@ -67,7 +68,7 @@ const Portfolio = () => {
         '/pakartani/pakar5.png',
         '/pakartani/pakar6.png'
       ],
-      description: 'A comprehensive e-commerce platform with modern features.'
+      description: 'A comprehensive community agriculture website that provides tips and tricks for farming, along with information about agricultural product prices.'
     },
     {
       id: 3,
@@ -82,7 +83,7 @@ const Portfolio = () => {
         '/gradian/Login.png',
         '/gradian/Profil.png'
       ],
-      description: 'A comprehensive e-commerce platform with modern features.'
+      description: 'An IoT-based web platform for monitoring grape crops, including humidity, temperature, and light levels. The system also features automation for irrigation, customizable watering schedules, and a manual control option, ensuring optimal growth conditions for the grapes.'
     },
     {
       id: 4,
@@ -95,7 +96,7 @@ const Portfolio = () => {
         '/croprecommendation/croprec1.png',
         '/croprecommendation/croprec2.png',
       ],
-      description: 'An AI-powered image recognition tool for real-time object detection and classification.'
+      description: 'A crop recommendation system that utilizes a Random Forest Classifier to predict the most suitable crops based on soil and climatic factors such as nitrogen levels, pH, temperature, and rainfall.'
     },
     {
       id: 5,
@@ -110,7 +111,7 @@ const Portfolio = () => {
         '/gradianiot/gradianiot.jpeg'
 
       ],
-      description: 'A comprehensive e-commerce platform with modern features.'
+      description: 'An IoT configuration for monitoring grape crops, including humidity, temperature, and light levels. The system also includes automated irrigation, customizable watering schedules, and a manual control option to ensure optimal growth conditions for the grapes.'
     },
     {
       id: 6,
@@ -132,7 +133,7 @@ const Portfolio = () => {
         '/EST/EST11.jpg',
         '/EST/EST12.jpg'
       ],
-      description: 'A comprehensive e-commerce platform with modern features.'
+      description: 'An agriculture community forum combined with an e-commerce platform for agricultural tools and supplies.'
     },
   ];
   

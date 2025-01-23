@@ -123,8 +123,6 @@ const Portfolio = () => {
       images: [
         '/EST/EST1.png',
         '/EST/EST3.png',
-        '/EST/EST4.png',
-        '/EST/EST5.png',
         '/EST/EST6.jpg',
         '/EST/EST7.jpg',
         '/EST/EST8.jpg',

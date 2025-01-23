@@ -45,6 +45,7 @@ const Portfolio = () => {
       github: 'https://github.com/Farrasagogo/subur',
       demo: 'https://youtube.com/shorts/8Nr7qW2GpMg?feature=share',
       images: [
+        '/udaraku/wiring.png',
         '/udaraku/udaraku.png',
         '/udaraku/udaraku3.png',
         '/udaraku/udaraku4.png',
@@ -121,7 +122,6 @@ const Portfolio = () => {
       github: 'https://github.com/username/ecommerce-platform',
       images: [
         '/EST/EST1.png',
-        '/EST/EST2.png',
         '/EST/EST3.png',
         '/EST/EST4.png',
         '/EST/EST5.png',
